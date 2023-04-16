@@ -1,4 +1,4 @@
-# SV_Portfolio
+# 김성현 게임서버 포트폴리오
 
 ### 1_GameServer
 게임서버 - MMO 게임서버 솔루션의 일부

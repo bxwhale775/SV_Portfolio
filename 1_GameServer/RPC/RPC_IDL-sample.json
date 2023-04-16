@@ -1,0 +1,39 @@
+{
+    "settings":{
+        "RPCID_type": "int",
+		"proxy_dir_header_name": "CNetRPCProxy.h",
+		"proxy_class_name": "CNetRPCProxy",
+		"stub_dir_header_name": "CNetRPCStub.h",
+		"stub_class_name": "CNetRPCStub",
+		"stub_make_param_arg_define": true,
+		"print_code_at_console": false
+    },
+    "RPCs":{
+        "Data1": {
+            "RPCID": 1,
+            "values":{
+                "par1": "int",
+                "par2": "float"
+            }
+        },
+        "Data2": {
+            "values":{
+                "dd": "double",
+                "bb": "bool"
+            }
+        },
+        "Fire": {
+            "RPCID": 10,
+            "values":{
+                "where": "NID",
+                "target[10][23]": "NID",
+                "why": "int"
+            }
+        },
+        "Archive_That": {
+            "values":{
+                "thedata": "short"
+            }
+        }
+    }
+}

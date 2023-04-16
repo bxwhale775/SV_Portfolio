@@ -1,0 +1,264 @@
+{
+    "settings": {
+        "RPCID_type": "WORD",
+        "proxy_dir_header_name": "../GameServer/CNetRPCProxy.h",
+        "proxy_class_name": "CNetRPCProxy",
+        "stub_dir_header_name": "../GameServer/CNetRPCStub.h",
+        "stub_class_name": "CNetRPCStub",
+        "stub_make_param_arg_define": true,
+        "print_code_at_console": false
+    },
+    "RPCs": {
+
+        "PACKET_CS_GAME_SERVER": {
+            "RPCID": 1000
+        },
+
+        "PACKET_CS_GAME_REQ_LOGIN": {
+            "values": {
+                "AccountNo": "INT64",
+                "SessionKey[64]": "char",
+                "Version": "int"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_LOGIN": {
+            "values": {
+                "Status": "BYTE",
+                "AccountNo": "INT64"
+            }
+        },
+
+        "PACKET_CS_GAME_REQ_CHARACTER_SELECT": {
+            "values": {
+                "CharacterType": "BYTE"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_CHARACTER_SELECT": {
+            "values": {
+                "Status": "BYTE"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_CREATE_MY_CHARACTER": {
+            "values": {
+                "ClientID": "INT64",
+                "CharacterType": "BYTE",
+                "Nickname[20]": "WCHAR",
+                "PosX": "float",
+                "PosY": "float",
+                "Rotation": "USHORT",
+                "Cristal": "int",
+                "HP": "int",
+                "Exp": "INT64",
+                "Level": "USHORT"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_CREATE_OTHER_CHARACTER": {
+            "values": {
+                "ClientID": "INT64",
+                "CharacterType": "BYTE",
+                "Nickname[20]": "WCHAR",
+                "PosX": "float",
+                "PosY": "float",
+                "Rotation": "USHORT",
+                "Level": "USHORT",
+                "Respawn": "BYTE",
+                "Sit": "BYTE",
+                "Die": "BYTE"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_CREATE_MONSTER_CHARACTER": {
+            "values": {
+                "ClientID": "INT64",
+                "PosX": "float",
+                "PosY": "float",
+                "Rotation": "USHORT",
+                "Respawn": "BYTE"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_REMOVE_OBJECT": {
+            "values": {
+                "ClientID": "INT64"
+            }
+        },
+
+        "PACKET_CS_GAME_REQ_MOVE_CHARACTER": {
+            "values": {
+                "ClientID": "INT64",
+                "X": "float",
+                "Y": "float",
+                "Rotation": "USHORT",
+                "VKey": "BYTE",
+                "HKey": "BYTE"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_MOVE_CHARACTER": {
+            "values": {
+                "ClientID": "INT64",
+                "X": "float",
+                "Y": "float",
+                "Rotation": "USHORT",
+                "VKey": "BYTE",
+                "HKey": "BYTE"
+            }
+        },
+
+        "PACKET_CS_GAME_REQ_STOP_CHARACTER": {
+            "values": {
+                "ClientID": "INT64",
+                "X": "float",
+                "Y": "float",
+                "Rotation": "USHORT"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_STOP_CHARACTER": {
+            "values": {
+                "ClientID": "INT64",
+                "X": "float",
+                "Y": "float",
+                "Rotation": "USHORT"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_MOVE_MONSTER": {
+            "values": {
+                "ClientID": "INT64",
+                "X": "float",
+                "Y": "float",
+                "Rotation": "USHORT"
+            }
+        },
+
+        
+        "PACKET_CS_GAME_REQ_ATTACK1": {
+            "values": {
+                "ClientID": "INT64"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_ATTACK1": {
+            "values": {
+                "ClientID": "INT64"
+            }
+        },
+
+        "PACKET_CS_GAME_REQ_ATTACK2": {
+            "values": {
+                "ClientID": "INT64"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_ATTACK2": {
+            "values": {
+                "ClientID": "INT64"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_MONSTER_ATTACK": {
+            "values": {
+                "ClientID": "INT64"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_DAMAGE": {
+            "values": {
+                "AttackClientID": "INT64",
+                "TargetClientID": "INT64",
+                "Damage": "int"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_MONSTER_DIE": {
+            "values": {
+                "MonsterClientID": "INT64"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_CREATE_CRISTAL": {
+            "values": {
+                "CristalClientID": "INT64",
+                "byCristalType": "BYTE",
+                "fPosX": "float",
+                "fPosY": "float"
+            }
+        },
+
+        "PACKET_CS_GAME_REQ_PICK": {
+            "values": {
+                "ClientID": "INT64"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_PICK": {
+            "values": {
+                "ClientID": "INT64"
+            }
+        },
+
+        "PACKET_CS_GAME_REQ_SIT": {
+            "values": {
+                "ClientID": "INT64"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_SIT": {
+            "values": {
+                "ClientID": "INT64"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_PICK_CRISTAL": {
+            "values": {
+                "ClientID": "INT64",
+                "CristalClientID": "INT64",
+                "AmountCristal": "int"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_PLAYER_HP": {
+            "values": {
+                "HP": "INT"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_PLAYER_DIE": {
+            "values": {
+                "ClientID": "INT64",
+                "MinusCristal": "int"
+            }
+        },
+
+        "PACKET_CS_GAME_REQ_PLAYER_RESTART": {
+        },
+
+        "PACKET_CS_GAME_RES_PLAYER_RESTART": {
+        },
+
+        "PACKET_CS_GAME_REQ_ECHO": {
+            "RPCID": 5000,
+            "values": {
+                "AccountoNo": "INT64",
+                "SendTick": "LONGLONG"
+            }
+        },
+
+        "PACKET_CS_GAME_RES_ECHO": {
+            "values": {
+                "AccountoNo": "INT64",
+                "SendTick": "LONGLONG"
+            }
+        },
+
+        "PACKET_CS_GAME_REQ_HEARTBEAT": {
+            "values": {
+            }
+        }
+    }
+}
